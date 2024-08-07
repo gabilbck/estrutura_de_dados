@@ -27,7 +27,7 @@ int main(void){
     dif = a-b;
     printf("%i - %i = %i\n", a, b, dif);
     
-    mult1 = (a*2)+(3*b);
+    mult1 = (a*2)+(b*b*b);
     printf("%i - %i = %i\n", a, b, mult1);
     
     mult2 = a*b;

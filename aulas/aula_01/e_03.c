@@ -11,13 +11,31 @@ d) Salário líquido.
 */
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-float iss(float sal, float des);
+float iss(float sb);
+void folha(float sb, float des, float sl, const char* nm);
 
-int main(){
+int main() {
     float sb = 0, des = 0, sl = 0;
-    char nm[];
 
-    
+    printf("Seu salario bruto: ");
+    scanf("%f", &sb);
+
+    des = iss(sb);
+    sl = sb - des;
+
+    folha(sb, des, sl, "Nome");
+
+    return 0;
+}
+
+float iss(float sb) {
+    return sb * 0.08;
+}
+
+void folha(float sb, float des, float sl, const char* nm) {
+    printf("Nome:            %s\n", nm);
+    printf("Salario bruto:   %.2f\n", sb);
+    printf("Desconto:        %.2f\n", des);
+    printf("Salario Liquido: %.2f\n", sl);
 }
