@@ -35,6 +35,6 @@ int main(void) {
     } else {
         printf("Delta negativo (%f), equação não possui raízes reais.\n", delta);
     }
-
+ 
     return 0;
 }
