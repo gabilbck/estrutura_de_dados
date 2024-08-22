@@ -16,7 +16,7 @@ int main(void){
     scanf("%f", &r);
     *area = pi * (r*r);
 
-    printf("area: ", *area);
+    printf("area: %f", *area);
 
     return 0;
 }
