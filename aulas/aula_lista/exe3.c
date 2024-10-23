@@ -7,16 +7,20 @@ solicite ao usuário os números e apresente para ele a média dos números.
 #include <stdio.h>
 
 int main(void){
-    float lista[6];  // Alterar o tipo para float ou double, dependendo da precisão desejada
+    float lista[6], total;
     
     for(int i=0; i<6; i++){
         printf("Digite o %iº número: ", i+1);
-        scanf("%f", &lista[i]);  // Alterar o formato de entrada para %f para float
+        scanf("%f", &lista[i]);
     }
     
     for(int i=0; i<6; i++){
-        printf("%.2f\n", lista[i]);  // Usar %.2f para exibir com 2 casas decimais (ou ajusta conforme necessário)
+        total+=lista[i];
+        if(i==5){
+            printf("%f / 6 = %f",lista[i], total/6);
+        } else{
+            printf("%f + ", lista[i]);
+        }
     }
-    
     return 0;
 }
